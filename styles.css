@@ -1,4 +1,5 @@
 :root {
+
     --color-bg: #050505;
     --color-surface: #111114;
     --color-surface-alt: #16161b;
@@ -13,6 +14,7 @@
     --radius-lg: 28px;
     --container-max: min(1120px, 92vw);
     --transition: 0.3s ease;
+
 }
 
 * {
@@ -22,6 +24,7 @@
 body {
     margin: 0;
     font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
     background:
         radial-gradient(circle at 10% 15%, rgba(212, 175, 55, 0.18), transparent 55%),
         radial-gradient(circle at 90% 20%, rgba(255, 255, 255, 0.1), transparent 45%),
@@ -30,6 +33,7 @@ body {
     color: var(--color-text);
     line-height: 1.6;
     letter-spacing: 0.01em;
+
 }
 
 img {
@@ -44,6 +48,7 @@ a {
 
 a:hover,
 a:focus {
+
     color: var(--color-accent);
 }
 
@@ -51,26 +56,32 @@ a:focus {
     width: var(--container-max);
     margin: 0 auto;
     padding: 0 1.5rem;
+
 }
 
 .site-header {
     position: sticky;
     top: 0;
+
     z-index: 20;
     backdrop-filter: blur(14px);
     background: rgba(5, 5, 5, 0.85);
     border-bottom: 1px solid var(--color-border);
+
 }
 
 .header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     padding: 1.25rem 0;
+
 }
 
 .brand {
     display: inline-flex;
+
     align-items: center;
 }
 
@@ -84,6 +95,7 @@ a:focus {
     align-items: center;
     gap: 1.75rem;
     list-style: none;
+
     margin: 0;
     padding: 0;
 }
@@ -93,15 +105,18 @@ a:focus {
     transition: color var(--transition);
 }
 
+
 .nav-accent {
     padding: 0.4rem 0.95rem;
     border: 1px solid rgba(212, 175, 55, 0.4);
+
     border-radius: 999px;
 }
 
 .nav-toggle {
     display: none;
     flex-direction: column;
+
     justify-content: center;
     gap: 0.3rem;
     width: 2.75rem;
@@ -143,9 +158,11 @@ a:focus {
     text-transform: uppercase;
     letter-spacing: 0.32em;
     font-size: 0.75rem;
+
     color: var(--color-accent);
     margin-bottom: 1rem;
 }
+
 
 .hero-season::before {
     content: '';
@@ -164,19 +181,23 @@ a:focus {
     color: var(--color-muted);
     max-width: 36rem;
     margin-bottom: 2rem;
+
 }
 
 .hero-actions {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+
     margin-bottom: 2.5rem;
+
 }
 
 .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+
     gap: 0.6rem;
     padding: 0.85rem 1.6rem;
     border-radius: 999px;
@@ -185,18 +206,22 @@ a:focus {
     letter-spacing: 0.04em;
     text-transform: uppercase;
     font-size: 0.82rem;
+
     transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
 }
 
 .btn-primary {
+
     background: linear-gradient(135deg, #d4af37, #f4d76d);
     color: #16161b;
     box-shadow: 0 14px 28px rgba(212, 175, 55, 0.3);
+
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
     transform: translateY(-2px);
+
     box-shadow: 0 20px 40px rgba(212, 175, 55, 0.35);
 }
 
@@ -204,10 +229,12 @@ a:focus {
     border-color: rgba(212, 175, 55, 0.6);
     color: var(--color-text);
     background: transparent;
+
 }
 
 .btn-outline:hover,
 .btn-outline:focus {
+
     background: rgba(212, 175, 55, 0.12);
     transform: translateY(-2px);
 }
@@ -227,21 +254,25 @@ a:focus {
 .btn-ghost:hover,
 .btn-ghost:focus {
     background: rgba(255, 255, 255, 0.08);
+
 }
 
 .btn-link {
     background: none;
+
     border: none;
     padding: 0;
     color: var(--color-accent);
     font-weight: 600;
     cursor: pointer;
+
 }
 
 .btn-link:hover,
 .btn-link:focus {
     text-decoration: underline;
 }
+
 
 .hero-stats {
     display: grid;
@@ -259,10 +290,12 @@ a:focus {
 .hero-stats dd {
     margin: 0.25rem 0 0;
     color: var(--color-muted);
+
 }
 
 .hero-stage {
     position: relative;
+
     padding: 2.5rem;
     border-radius: var(--radius-lg);
     background: linear-gradient(145deg, rgba(212, 175, 55, 0.05), rgba(255, 255, 255, 0));
@@ -330,23 +363,29 @@ a:focus {
     text-align: center;
     max-width: 48rem;
     margin: 0 auto 3rem;
+
 }
 
 .section-header h2 {
     font-family: 'Playfair Display', serif;
+
     font-size: clamp(2rem, 4vw, 2.8rem);
     margin-bottom: 1rem;
+
 }
 
 .section-lead {
     color: var(--color-muted);
+
     margin: 0;
+
 }
 
 .filters {
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
+
     justify-content: center;
     margin-bottom: 2.5rem;
 }
@@ -358,9 +397,11 @@ a:focus {
     background: rgba(17, 17, 20, 0.7);
     color: var(--color-muted);
     font-weight: 600;
+
     cursor: pointer;
     transition: background var(--transition), color var(--transition), border-color var(--transition);
 }
+
 
 .filter-btn:hover,
 .filter-btn:focus {
@@ -371,10 +412,12 @@ a:focus {
     border-color: rgba(212, 175, 55, 0.6);
     color: var(--color-text);
     background: rgba(212, 175, 55, 0.16);
+
 }
 
 .card-grid {
     display: grid;
+
     gap: 2rem;
 }
 
@@ -392,10 +435,12 @@ a:focus {
     flex-direction: column;
     gap: 1.5rem;
     transition: transform var(--transition), border-color var(--transition);
+
 }
 
 .card:hover,
 .card:focus-within {
+
     transform: translateY(-6px);
     border-color: rgba(212, 175, 55, 0.4);
 }
@@ -404,10 +449,12 @@ a:focus {
     font-family: 'Playfair Display', serif;
     font-size: 1.6rem;
     margin: 0.25rem 0 0;
+
 }
 
 .badge {
     display: inline-flex;
+
     align-items: center;
     padding: 0.25rem 0.75rem;
     background: rgba(212, 175, 55, 0.22);
@@ -673,11 +720,13 @@ a:focus {
     padding: 3.5rem 0 2.5rem;
     background: rgba(5, 5, 5, 0.9);
     border-top: 1px solid rgba(255, 255, 255, 0.06);
+
 }
 
 .footer-container {
     display: grid;
     gap: 2.5rem;
+
 }
 
 .footer-brand {
@@ -716,22 +765,28 @@ a:focus {
     display: none;
 }
 
+
 .modal {
     position: fixed;
     inset: 0;
     display: grid;
     place-items: center;
+
     z-index: 50;
+
 }
 
 .modal-backdrop {
     position: absolute;
     inset: 0;
+
     background: rgba(5, 5, 5, 0.75);
+
 }
 
 .modal-content {
     position: relative;
+
     width: min(520px, 90vw);
     background: rgba(17, 17, 20, 0.92);
     border-radius: var(--radius-lg);
@@ -740,10 +795,12 @@ a:focus {
     box-shadow: 0 40px 80px rgba(0, 0, 0, 0.55);
     display: grid;
     gap: 1.2rem;
+
 }
 
 .modal-close {
     position: absolute;
+
     top: 1.2rem;
     right: 1.2rem;
     width: 2.4rem;
@@ -793,10 +850,12 @@ a:focus {
 
     .site-nav.open {
         transform: translateX(0);
+
     }
 
     .site-nav ul {
         flex-direction: column;
+
         align-items: flex-start;
         gap: 1.5rem;
     }
@@ -852,5 +911,6 @@ a:focus {
 
     .footer-links {
         justify-items: center;
+
     }
 }

@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const filterButtons = document.querySelectorAll('.filter-btn');
+
     const productionCards = document.querySelectorAll('[data-list="productions"] .card');
 
     const applyFilter = (category) => {
@@ -27,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const categories = (card.dataset.category || '').split(/\s+/).filter(Boolean);
             const match = category === 'all' || categories.includes(category);
             card.toggleAttribute('hidden', !match);
+
         });
     };
 
@@ -39,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+
     applyFilter('all');
 
     const modal = document.getElementById('details-modal');
@@ -47,11 +50,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalTeam = modal?.querySelector('#modal-team');
     const modalDuration = modal?.querySelector('#modal-duration');
     const dismissors = modal?.querySelectorAll('[data-dismiss="modal"]');
+
     let activeTrigger = null;
 
     const openModal = (trigger) => {
         if (!modal || !modalTitle || !modalDescription || !modalTeam || !modalDuration) return;
         activeTrigger = trigger;
+
         modalTitle.textContent = trigger.dataset.title || 'Спектакль AmmA Production';
         modalDescription.textContent = trigger.dataset.description || '';
         modalTeam.textContent = trigger.dataset.team || '';
@@ -61,6 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const closeButton = modal.querySelector('.modal-close');
         if (closeButton) {
             closeButton.focus();
+
         }
     };
 
@@ -80,6 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (target.matches('.details-btn')) {
             event.preventDefault();
+
             openModal(target);
         }
 
@@ -93,6 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
             closeModal();
         }
     });
+
 
     dismissors?.forEach((element) => {
         element.addEventListener('click', closeModal);
@@ -158,6 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
             confirmation.textContent = 'Спасибо! Мы получили сообщение и ответим в течение двух рабочих дней.';
             window.setTimeout(() => {
                 confirmation.textContent = '';
+
             }, 6000);
         });
     }
