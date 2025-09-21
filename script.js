@@ -20,12 +20,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const filterButtons = document.querySelectorAll('.filter-btn');
-    const productionCards = document.querySelectorAll('[data-list="productions"] .production-card');
+
+    const productionCards = document.querySelectorAll('[data-list="productions"] .card');
 
     const applyFilter = (category) => {
         productionCards.forEach((card) => {
-            const match = category === 'all' || card.dataset.category === category;
-            card.hidden = !match;
+            const categories = (card.dataset.category || '').split(/\s+/).filter(Boolean);
+            const match = category === 'all' || categories.includes(category);
+            card.toggleAttribute('hidden', !match);
+
         });
     };
 
@@ -38,12 +41,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+
+    applyFilter('all');
+
     const modal = document.getElementById('details-modal');
     const modalTitle = modal?.querySelector('#modal-title');
-    const modalDescription = modal?.querySelector('.modal-description');
-    const modalTeam = modal?.querySelector('.modal-team');
-    const modalDuration = modal?.querySelector('.modal-duration');
-    const closeButtons = modal?.querySelectorAll('[data-dismiss="modal"]');
+    const modalDescription = modal?.querySelector('#modal-description');
+    const modalTeam = modal?.querySelector('#modal-team');
+    const modalDuration = modal?.querySelector('#modal-duration');
+    const dismissors = modal?.querySelectorAll('[data-dismiss="modal"]');
+
     let activeTrigger = null;
 
     const openModal = (trigger) => {
@@ -51,15 +58,15 @@ document.addEventListener('DOMContentLoaded', () => {
         activeTrigger = trigger;
 
         modalTitle.textContent = trigger.dataset.title || 'Спектакль AmmA Production';
-
         modalDescription.textContent = trigger.dataset.description || '';
-        modalTeam.textContent = trigger.dataset.team ? `Творческая команда: ${trigger.dataset.team}` : '';
-        modalDuration.textContent = trigger.dataset.duration ? `Продолжительность: ${trigger.dataset.duration}` : '';
+        modalTeam.textContent = trigger.dataset.team || '';
+        modalDuration.textContent = trigger.dataset.duration || '';
         modal.hidden = false;
         document.body.style.overflow = 'hidden';
-        const focusable = modal.querySelector('.modal-close');
-        if (focusable) {
-            focusable.focus();
+        const closeButton = modal.querySelector('.modal-close');
+        if (closeButton) {
+            closeButton.focus();
+
         }
     };
 
@@ -78,6 +85,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!(target instanceof HTMLElement)) return;
 
         if (target.matches('.details-btn')) {
+            event.preventDefault();
+
             openModal(target);
         }
 
@@ -92,32 +101,72 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    closeButtons?.forEach((btn) => {
-        btn.addEventListener('click', closeModal);
+
+    dismissors?.forEach((element) => {
+        element.addEventListener('click', closeModal);
     });
 
-    const contactForm = document.querySelector('.contact-form form, .contact-form');
-    if (contactForm instanceof HTMLFormElement) {
-        const note = contactForm.querySelector('.form-note');
-        const success = document.createElement('p');
-        success.className = 'form-success';
-        success.textContent = 'Спасибо! Мы получили вашу заявку и свяжемся с вами в ближайшее время.';
-        success.hidden = true;
-        if (note) {
-            note.insertAdjacentElement('beforebegin', success);
-        } else {
-            contactForm.append(success);
-        }
+    const contactForm = document.getElementById('contact-form');
+    const confirmation = document.getElementById('form-confirmation');
+
+    if (contactForm instanceof HTMLFormElement && confirmation) {
+        const nameField = contactForm.querySelector('#name');
+        const emailField = contactForm.querySelector('#email');
+        const messageField = contactForm.querySelector('#message');
+        const nameError = contactForm.querySelector('#name-error');
+        const emailError = contactForm.querySelector('#email-error');
+        const messageError = contactForm.querySelector('#message-error');
+
+        const setError = (field, errorNode, message) => {
+            if (!(field instanceof HTMLInputElement || field instanceof HTMLTextAreaElement) || !(errorNode instanceof HTMLElement)) {
+                return true;
+            }
+
+            if (message) {
+                errorNode.textContent = message;
+                field.setAttribute('aria-invalid', 'true');
+                return false;
+            }
+
+            errorNode.textContent = '';
+            field.removeAttribute('aria-invalid');
+            return true;
+        };
+
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+        const validateFields = () => {
+            let isValid = true;
+            isValid = setError(nameField, nameError, nameField && nameField.value.trim() ? '' : 'Укажите имя.') && isValid;
+
+            if (emailField instanceof HTMLInputElement) {
+                const value = emailField.value.trim();
+                const message = value && emailPattern.test(value) ? '' : 'Введите корректный email.';
+                isValid = setError(emailField, emailError, message) && isValid;
+            }
+
+            isValid = setError(messageField, messageError, messageField && messageField.value.trim() ? '' : 'Напишите сообщение.') && isValid;
+            return isValid;
+        };
+
+        [nameField, emailField, messageField].forEach((field) => {
+            field?.addEventListener('input', validateFields);
+            field?.addEventListener('blur', validateFields);
+        });
 
         contactForm.addEventListener('submit', (event) => {
             event.preventDefault();
-            contactForm.reset();
-            success.hidden = false;
-            if (typeof success.focus === 'function') {
-                success.focus();
+            if (!validateFields()) {
+                confirmation.textContent = '';
+                return;
             }
+
+            contactForm.reset();
+            [nameField, emailField, messageField].forEach((field) => field?.removeAttribute('aria-invalid'));
+            confirmation.textContent = 'Спасибо! Мы получили сообщение и ответим в течение двух рабочих дней.';
             window.setTimeout(() => {
-                success.hidden = true;
+                confirmation.textContent = '';
+
             }, 6000);
         });
     }
