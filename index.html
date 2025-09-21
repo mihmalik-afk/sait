@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Современная театральная компания: премьеры, гастроли, образовательные проекты и заказ билетов онлайн.">
+    <title>Театр Сфера — современная театральная компания</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header class="site-header" id="top">
+        <div class="container header-container">
+            <a class="brand" href="#top" aria-label="Театр Сфера">
+                <span class="brand-mark">Сфера</span>
+                <span class="brand-tagline">театр нового времени</span>
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="site-nav" class="site-nav" aria-label="Основная навигация">
+                <ul>
+                    <li><a href="#productions">Репертуар</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#ensemble">Труппа</a></li>
+                    <li><a href="#outreach">Студия</a></li>
+                    <li><a href="#visit">Визит</a></li>
+                    <li><a class="nav-accent" href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <p class="hero-overtitle">Премьеры сезона 2024/25</p>
+                    <h1 id="hero-title">Живой театр, говорящий с городом</h1>
+                    <p class="hero-description">
+                        Театр «Сфера» соединяет классику и современные истории, приглашая зрителя пережить спектакль как личный опыт.
+                        На нашей сцене — громкие премьеры, камерные постановки и образовательные программы для всей семьи.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#productions">Афиша и билеты</a>
+                        <a class="btn btn-outline" href="#contact">Стать партнером</a>
+                    </div>
+                    <ul class="hero-highlights" aria-label="Ключевые факты о театре">
+                        <li>
+                            <strong>12</strong>
+                            <span>премьер за сезон</span>
+                        </li>
+                        <li>
+                            <strong>25+</strong>
+                            <span>актеров в труппе</span>
+                        </li>
+                        <li>
+                            <strong>4</strong>
+                            <span>лаборатории для детей и взрослых</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hero-visual" aria-hidden="true">
+                    <div class="hero-stage">
+                        <span class="light light-left"></span>
+                        <span class="light light-right"></span>
+                        <div class="stage"></div>
+                        <div class="audience"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="productions" class="section" aria-labelledby="productions-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="productions-title">Ближайшие спектакли</h2>
+                    <p class="section-lead">Выберите постановку, забронируйте места и узнайте подробности о творческой команде.</p>
+                </div>
+                <div class="filters" role="group" aria-label="Фильтр спектаклей">
+                    <button class="filter-btn active" type="button" data-filter="all">Все</button>
+                    <button class="filter-btn" type="button" data-filter="classic">Классика</button>
+                    <button class="filter-btn" type="button" data-filter="modern">Современная драма</button>
+                    <button class="filter-btn" type="button" data-filter="family">Семейные</button>
+                </div>
+                <div class="card-grid" data-list="productions">
+                    <article class="card production-card" data-category="classic">
+                        <div class="card-header">
+                            <p class="badge">Премьера</p>
+                            <h3>«Чайка. Эскиз света»</h3>
+                        </div>
+                        <p class="card-summary">Новая интерпретация Чехова с оригинальной сценографией, где сцена превращается в кинематограф.</p>
+                        <ul class="card-meta">
+                            <li><strong>Даты:</strong> 12–15 сентября</li>
+                            <li><strong>Площадка:</strong> Большая сцена</li>
+                            <li><strong>Возраст:</strong> 16+</li>
+                        </ul>
+                        <div class="card-actions">
+                            <a class="btn btn-ghost" href="#contact">Забронировать</a>
+                            <button class="btn btn-link details-btn" type="button" data-title="Чайка. Эскиз света" data-description="Режиссёрская команда Театра «Сфера» переосмысляет классику через язык света и музыки. Спектакль исследует тему свободы, которая звучит по-новому для поколения 2020-х." data-team="Режиссёр — Полина Кравцова, художник по свету — Артём Лин, музыка — группа «Октава»" data-duration="2 часа 15 минут с антрактом">Подробнее</button>
+                        </div>
+                    </article>
+
+                    <article class="card production-card" data-category="modern">
+                        <div class="card-header">
+                            <h3>«Пульс мегаполиса»</h3>
+                        </div>
+                        <p class="card-summary">Истории жителей большого города, рассказанные через танцевальный театр и живой звук.</p>
+                        <ul class="card-meta">
+                            <li><strong>Даты:</strong> 27–29 сентября</li>
+                            <li><strong>Площадка:</strong> Черный зал</li>
+                            <li><strong>Возраст:</strong> 18+</li>
+                        </ul>
+                        <div class="card-actions">
+                            <a class="btn btn-ghost" href="#contact">Забронировать</a>
+                            <button class="btn btn-link details-btn" type="button" data-title="Пульс мегаполиса" data-description="Спектакль-погружение о жизни мегаполиса. Зрители становятся свидетелями и участниками перформативных сцен, разворачивающихся среди них." data-team="Хореография — Макс Орлов, драматургия — Мария Дудина, живой звук — электронный дуэт «Вспышка»." data-duration="1 час 40 минут без антракта">Подробнее</button>
+                        </div>
+                    </article>
+
+                    <article class="card production-card" data-category="family">
+                        <div class="card-header">
+                            <p class="badge badge-alt">Выходные</p>
+                            <h3>«Театр теней. Истории фонарщика»</h3>
+                        </div>
+                        <p class="card-summary">Музыкальная сказка с интерактивными элементами, где зрители создают собственные теневые сцены.</p>
+                        <ul class="card-meta">
+                            <li><strong>Даты:</strong> Каждую субботу октября</li>
+                            <li><strong>Площадка:</strong> Камерная сцена</li>
+                            <li><strong>Возраст:</strong> 6+</li>
+                        </ul>
+                        <div class="card-actions">
+                            <a class="btn btn-ghost" href="#contact">Забронировать</a>
+                            <button class="btn btn-link details-btn" type="button" data-title="Театр теней. Истории фонарщика" data-description="Спектакль с мастер-классом по теневому театру. Дети и родители создают персонажей и оживляют их на мини-сцене." data-team="Постановка — лаборатория «Свет и звук», автор музыки — Лада Несторова." data-duration="1 час 10 минут + мастерская">Подробнее</button>
+                        </div>
+                    </article>
+
+                    <article class="card production-card" data-category="modern">
+                        <div class="card-header">
+                            <h3>«Двенадцать этажей»</h3>
+                        </div>
+                        <p class="card-summary">Документальный проект на основе интервью с жителями многоэтажек, созданный совместно с городским архивом.</p>
+                        <ul class="card-meta">
+                            <li><strong>Даты:</strong> 5–7 октября</li>
+                            <li><strong>Площадка:</strong> Лаборатория</li>
+                            <li><strong>Возраст:</strong> 14+</li>
+                        </ul>
+                        <div class="card-actions">
+                            <a class="btn btn-ghost" href="#contact">Забронировать</a>
+                            <button class="btn btn-link details-btn" type="button" data-title="Двенадцать этажей" data-description="Вербатим-постановка, созданная по интервью с реальными жителями. Каждый этаж — отдельная история, которую зритель проживает вместе с героями." data-team="Режиссёр — Игорь Сомов, драматург — лаборатория документального театра, художник — Вера Лис." data-duration="1 час 55 минут без антракта">Подробнее</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section section-alt" aria-labelledby="about-title">
+            <div class="container about-layout">
+                <div>
+                    <h2 id="about-title">Мы рассказываем истории, которые меняют взгляд</h2>
+                    <p>Театр «Сфера» — независимая команда режиссёров, артистов и продюсеров, объединённых желанием говорить о современности языком сценического искусства. Мы создаём репертуар, в котором классика встречается с актуальными темами, а традиционные формы сочетаются с новыми технологиями.</p>
+                    <ul class="checklist">
+                        <li>Авторские премьеры и международные гастроли</li>
+                        <li>Инклюзивные проекты и тактильные показы</li>
+                        <li>Открытые лаборатории для режиссёров, драматургов и композиторов</li>
+                        <li>Образовательные программы для школ и университетов</li>
+                    </ul>
+                </div>
+                <div class="about-highlight">
+                    <h3>Пространство для города</h3>
+                    <p>Наш дом — историческое здание фабрики, переосмысленное как многофункциональный театр. Здесь расположены три сцены, медиатека, кафе и репетиционные залы, открытые для жителей района.</p>
+                    <a class="btn btn-outline" href="#visit">План здания и услуги</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="ensemble" class="section" aria-labelledby="ensemble-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="ensemble-title">Труппа и команда</h2>
+                    <p class="section-lead">Мы объединяем опытных артистов и молодых голосов театра. Познакомьтесь с лидерами творческих направлений.</p>
+                </div>
+                <div class="card-grid ensemble-grid">
+                    <article class="card person-card">
+                        <div class="person-avatar" aria-hidden="true">НД</div>
+                        <h3>Надежда Доронина</h3>
+                        <p class="person-role">художественный руководитель</p>
+                        <p>Лауреат национальной театральной премии. Куратор международной лаборатории «Диалог культур».</p>
+                        <ul class="person-links">
+                            <li><a href="mailto:doronina@sfera.theater">Написать письмо</a></li>
+                        </ul>
+                    </article>
+                    <article class="card person-card">
+                        <div class="person-avatar" aria-hidden="true">МО</div>
+                        <h3>Михаил Орлов</h3>
+                        <p class="person-role">главный режиссёр</p>
+                        <p>Известен по постановкам в Европе и Азии. Работает с перформативными практиками и иммерсивным театром.</p>
+                        <ul class="person-links">
+                            <li><a href="#productions">Постановки режиссёра</a></li>
+                        </ul>
+                    </article>
+                    <article class="card person-card">
+                        <div class="person-avatar" aria-hidden="true">АС</div>
+                        <h3>Анна Светлова</h3>
+                        <p class="person-role">директор образовательных программ</p>
+                        <p>Создаёт программы для школьников и взрослых. Руководит студиями актерского мастерства и звука.</p>
+                        <ul class="person-links">
+                            <li><a href="#outreach">Студии и курсы</a></li>
+                        </ul>
+                    </article>
+                    <article class="card person-card">
+                        <div class="person-avatar" aria-hidden="true">ЛК</div>
+                        <h3>Леонид Кравченко</h3>
+                        <p class="person-role">директор по развитию</p>
+                        <p>Отвечает за партнерства, корпоративные показы и социальные инициативы. Открыт к сотрудничеству.</p>
+                        <ul class="person-links">
+                            <li><a href="#contact">Контакт для партнёров</a></li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="calendar" class="section section-alt" aria-labelledby="calendar-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="calendar-title">Сезонные события</h2>
+                    <p class="section-lead">Спланируйте посещение: фестивали, читки и открытые репетиции.</p>
+                </div>
+                <div class="timeline" aria-label="Календарь событий">
+                    <article class="timeline-item">
+                        <span class="timeline-date">Август</span>
+                        <div class="timeline-content">
+                            <h3>Фестиваль новой драматургии</h3>
+                            <p>Читки пьес финалистов конкурса «Городские истории» с участием приглашённых режиссёров из Берлина и Таллина.</p>
+                        </div>
+                    </article>
+                    <article class="timeline-item">
+                        <span class="timeline-date">Октябрь</span>
+                        <div class="timeline-content">
+                            <h3>Ночь в театре</h3>
+                            <p>Иммерсивные экскурсии, behind-the-scenes показы, лекции о световом дизайне и концерты резидентов.</p>
+                        </div>
+                    </article>
+                    <article class="timeline-item">
+                        <span class="timeline-date">Декабрь</span>
+                        <div class="timeline-content">
+                            <h3>Зимняя резиденция</h3>
+                            <p>Лаборатория молодых режиссёров и художников по видео. Итог — показы эскизов на экспериментальной сцене.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="outreach" class="section" aria-labelledby="outreach-title">
+            <div class="container outreach-layout">
+                <div>
+                    <h2 id="outreach-title">Образовательная студия</h2>
+                    <p class="section-lead">Раскрываем потенциал каждого: от детей до профессионалов индустрии.</p>
+                    <ul class="checklist">
+                        <li><strong>Студия «Первый выход».</strong> Актерское мастерство для подростков 12–16 лет, итогом становится совместный спектакль.</li>
+                        <li><strong>Курс «Город как сцена».</strong> Лаборатория документального театра, работа с интервью и драматургией.</li>
+                        <li><strong>Тренинг «Звук и свет».</strong> Практические занятия на профессиональном оборудовании, наставники из команды театра.</li>
+                    </ul>
+                </div>
+                <aside class="outreach-aside">
+                    <h3>Корпоративные программы</h3>
+                    <p>Мы разрабатываем team-building и образовательные форматы на основе театральных практик: сторителлинг, импровизация, публичные выступления.</p>
+                    <a class="btn btn-primary" href="#contact">Запросить предложение</a>
+                </aside>
+            </div>
+        </section>
+
+        <section id="press" class="section section-alt" aria-labelledby="press-title">
+            <div class="container press-grid">
+                <div class="section-header">
+                    <h2 id="press-title">Отзывы и пресса</h2>
+                    <p class="section-lead">О театре пишут ведущие издания и зрители, которым важен живой разговор.</p>
+                </div>
+                <div class="quote-card">
+                    <p class="quote-text">«Театр «Сфера» демонстрирует, как можно соединить классическую драматургию и мультимедийные технологии, не потеряв человеческую интонацию».</p>
+                    <p class="quote-author">— Журнал «Артикуляция»</p>
+                </div>
+                <div class="quote-card">
+                    <p class="quote-text">«После спектакля «Пульс мегаполиса» кажется, будто знаешь каждого героя лично. Театр разговаривает с городом честно и смело».</p>
+                    <p class="quote-author">— Зрительница Мария К.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="visit" class="section" aria-labelledby="visit-title">
+            <div class="container visit-layout">
+                <div>
+                    <h2 id="visit-title">Как добраться</h2>
+                    <p class="section-lead">Мы находимся в творческом кластере бывшей фабрики «Пульс» и открыты каждый день с 10:00 до 22:00.</p>
+                    <ul class="visit-info">
+                        <li><strong>Адрес:</strong> Москва, ул. Новая Сцена, 12</li>
+                        <li><strong>Метро:</strong> «Театральная площадь», выход к набережной</li>
+                        <li><strong>Паркинг:</strong> бесплатная стоянка на 50 мест, въезд с улицы Световой</li>
+                        <li><strong>Доступность:</strong> лифты, пандусы и тифлокомментарий по запросу</li>
+                    </ul>
+                    <div class="visit-cta">
+                        <a class="btn btn-outline" href="#contact">Забронировать экскурсию по театру</a>
+                    </div>
+                </div>
+                <div class="map-card" role="img" aria-label="Схема проезда к театру">
+                    <div class="map-grid">
+                        <span class="map-marker">Сфера</span>
+                    </div>
+                    <p>Мы в пяти минутах пешком от метро и рядом с городским парком. Вход через арку с неоновой вывеской.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section section-alt" aria-labelledby="contact-title">
+            <div class="container contact-layout">
+                <div>
+                    <h2 id="contact-title">Контакты и бронирование</h2>
+                    <p class="section-lead">Выберите удобный способ связи. Мы ответим в течение двух рабочих часов.</p>
+                    <ul class="contact-list">
+                        <li><strong>Касса:</strong> +7 (495) 000-12-12 (ежедневно 11:00–21:00)</li>
+                        <li><strong>Партнёрства:</strong> partnerships@sfera.theater</li>
+                        <li><strong>Пресса:</strong> press@sfera.theater</li>
+                        <li><strong>Адрес для писем:</strong> 109000, Москва, ул. Новая Сцена, 12</li>
+                    </ul>
+                    <div class="social-links" aria-label="Социальные сети">
+                        <a href="#" aria-label="Мы в Instagram">Instagram</a>
+                        <a href="#" aria-label="Мы во ВКонтакте">VK</a>
+                        <a href="#" aria-label="Мы в YouTube">YouTube</a>
+                    </div>
+                </div>
+                <form class="contact-form" aria-label="Форма обратной связи">
+                    <fieldset>
+                        <legend>Заявка на бронирование или сотрудничество</legend>
+                        <label>
+                            Имя и фамилия
+                            <input type="text" name="name" required placeholder="Анна Петрова">
+                        </label>
+                        <label>
+                            Электронная почта
+                            <input type="email" name="email" required placeholder="name@example.com">
+                        </label>
+                        <label>
+                            Интересующий спектакль или услуга
+                            <input type="text" name="interest" placeholder="Например, «Чайка. Эскиз света»">
+                        </label>
+                        <label>
+                            Комментарий
+                            <textarea name="message" rows="4" placeholder="Опишите запрос или количество гостей"></textarea>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="subscribe" checked>
+                            <span>Подписаться на новости театра</span>
+                        </label>
+                        <button class="btn btn-primary" type="submit">Отправить заявку</button>
+                        <p class="form-note">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности театра.</p>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div>
+                <a class="brand brand-footer" href="#top" aria-label="Вернуться к началу">
+                    <span class="brand-mark">Сфера</span>
+                    <span class="brand-tagline">театр нового времени</span>
+                </a>
+                <p class="footer-description">© 2024 Театр «Сфера». Независимая театральная компания. Мы благодарим зрителей и партнёров за поддержку.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#productions">Афиша</a>
+                <a href="#outreach">Студия</a>
+                <a href="#contact">Политика конфиденциальности</a>
+            </div>
+            <div class="footer-meta">
+                <p>Создано с любовью к сцене и городу.</p>
+                <a class="btn btn-outline" href="mailto:hello@sfera.theater">Связаться с нами</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="details-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+        <div class="modal-backdrop" data-dismiss="modal"></div>
+        <div class="modal-content">
+            <button class="modal-close" type="button" data-dismiss="modal" aria-label="Закрыть диалог">×</button>
+            <h3 id="modal-title"></h3>
+            <p class="modal-description"></p>
+            <p class="modal-team"></p>
+            <p class="modal-duration"></p>
+            <div class="modal-actions">
+                <a class="btn btn-primary" href="#contact">Оставить заявку</a>
+                <button class="btn btn-outline" type="button" data-dismiss="modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+
+    <noscript>
+        <div class="noscript">Для полной интерактивности сайта включите JavaScript. Основная информация доступна на странице.</div>
+    </noscript>
+</body>
+</html>
