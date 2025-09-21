@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="description" content="AmmA Production — независимая театральная компания. Афиша спектаклей, программы, команда и контакты для партнёров и зрителей.">
+    <title>AmmA Production — независимая театральная компания</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header class="site-header" id="top">
+        <div class="container header-container">
+            <a class="brand" href="#top" aria-label="AmmA Production">
+                <img class="brand-logo" src="assets/logo.svg" alt="Логотип AmmA Production" width="164" height="64">
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="site-nav" class="site-nav" aria-label="Основная навигация">
+                <ul>
+                    <li><a href="#productions">Репертуар</a></li>
+                    <li><a href="#mission">О театре</a></li>
+                    <li><a href="#ensemble">Команда</a></li>
+                    <li><a href="#programs">Программы</a></li>
+                    <li><a href="#visit">Визит</a></li>
+                    <li><a class="nav-accent" href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="container hero-container">
+                <div class="hero-copy">
+                    <p class="hero-season">Сезон 2024/25</p>
+                    <h1 id="hero-title">AmmA Production — театр, который объединяет людей и смыслы</h1>
+                    <p class="hero-lead">
+                        Мы создаём премьеры, лаборатории и городские перформансы, исследуя новые формы театра.
+                        AmmA Production — независимая творческая сила, которая приглашает зрителя быть соавтором.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#productions">Купить билеты</a>
+                        <a class="btn btn-outline" href="#contact">Сотрудничество</a>
+                    </div>
+                    <dl class="hero-stats">
+                        <div>
+                            <dt>12</dt>
+                            <dd>премьер в сезоне</dd>
+                        </div>
+                        <div>
+                            <dt>5</dt>
+                            <dd>образовательных программ</dd>
+                        </div>
+                        <div>
+                            <dt>30+</dt>
+                            <dd>артистов и музыкантов</dd>
+                        </div>
+                    </dl>
+                </div>
+                <div class="hero-stage" aria-hidden="true">
+                    <div class="stage-frame">
+                        <span class="stage-light stage-light-left"></span>
+                        <span class="stage-light stage-light-right"></span>
+                        <div class="stage-curtain"></div>
+                        <div class="stage-apron"></div>
+                    </div>
+                    <p class="stage-caption">Театр, где свет и тень создают диалог</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="productions" class="section" aria-labelledby="productions-title">
+            <div class="container">
+                <header class="section-header">
+                    <h2 id="productions-title">Ближайшие спектакли</h2>
+                    <p class="section-lead">Выберите постановку AmmA Production, изучите творческую команду и бронируйте места онлайн.</p>
+                </header>
+                <div class="filters" role="group" aria-label="Фильтр спектаклей">
+                    <button class="filter-btn active" type="button" data-filter="all">Все</button>
+                    <button class="filter-btn" type="button" data-filter="premiere">Премьеры</button>
+                    <button class="filter-btn" type="button" data-filter="modern">Современная драма</button>
+                    <button class="filter-btn" type="button" data-filter="family">Для всей семьи</button>
+                </div>
+                <div class="card-grid" data-list="productions">
+                    <article class="card" data-category="premiere modern">
+                        <div class="card-head">
+                            <p class="badge">Премьера</p>
+                            <h3>«Сон об электричестве»</h3>
+                        </div>
+                        <p class="card-text">Иммерсивный спектакль о городе будущего, где свет становится языком общения между людьми.</p>
+                        <ul class="card-meta">
+                            <li><strong>Даты:</strong> 14–17 сентября</li>
+                            <li><strong>Площадка:</strong> Главная сцена</li>
+                            <li><strong>Возраст:</strong> 16+</li>
+                        </ul>
+                        <div class="card-actions">
+                            <a class="btn btn-ghost" href="#contact">Забронировать</a>
+                            <button class="btn btn-link details-btn" type="button"
+                                data-title="Сон об электричестве"
+                                data-description="AmmA Production предлагает зрителю путешествие в город будущего. Свет, звук и движение создают пространство, где можно увидеть собственные мечты."
+                                data-team="Режиссёр — Полина Кравцова, художник по свету — Артём Лин, саунд-дизайн — дуэт «Октава»"
+                                data-duration="2 часа 10 минут, антракт 20 минут">Подробнее</button>
+                        </div>
+                    </article>
+
+                    <article class="card" data-category="modern">
+                        <div class="card-head">
+                            <h3>«Пульс города»</h3>
+                        </div>
+                        <p class="card-text">Пластический спектакль о ритмах мегаполиса и людях, которые в нём живут, сочетающий живой звук и видеопроекции.</p>
+                        <ul class="card-meta">
+                            <li><strong>Даты:</strong> 27–29 сентября</li>
+                            <li><strong>Площадка:</strong> Черный зал</li>
+                            <li><strong>Возраст:</strong> 18+</li>
+                        </ul>
+                        <div class="card-actions">
+                            <a class="btn btn-ghost" href="#contact">Забронировать</a>
+                            <button class="btn btn-link details-btn" type="button"
+                                data-title="Пульс города"
+                                data-description="Интерактивный перформанс, в котором зрители становятся участниками уличного движения. Каждая сцена — новая точка на карте мегаполиса."
+                                data-team="Хореография — Макс Орлов, драматургия — Мария Дудина, электронная музыка — группа «Вспышка»"
+                                data-duration="1 час 35 минут, без антракта">Подробнее</button>
+                        </div>
+                    </article>
+
+                    <article class="card" data-category="family">
+                        <div class="card-head">
+                            <p class="badge badge-alt">Выходные</p>
+                            <h3>«Театр теней. История фонарщика»</h3>
+                        </div>
+                        <p class="card-text">Музыкальная сказка и мастерская теневого театра, где дети создают собственные сцены и персонажей.</p>
+                        <ul class="card-meta">
+                            <li><strong>Даты:</strong> Каждую субботу октября</li>
+                            <li><strong>Площадка:</strong> Камерная сцена</li>
+                            <li><strong>Возраст:</strong> 6+</li>
+                        </ul>
+                        <div class="card-actions">
+                            <a class="btn btn-ghost" href="#contact">Забронировать</a>
+                            <button class="btn btn-link details-btn" type="button"
+                                data-title="Театр теней. История фонарщика"
+                                data-description="Семейный спектакль с участием зрителей. Мы вместе оживляем городские легенды и создаём теневой спектакль прямо на сцене."
+                                data-team="Режиссёр — лаборатория «Свет и звук», композитор — Лада Несторова"
+                                data-duration="1 час 15 минут + мастер-класс">Подробнее</button>
+                        </div>
+                    </article>
+
+                    <article class="card" data-category="premiere">
+                        <div class="card-head">
+                            <p class="badge">Премьера</p>
+                            <h3>«Голос памяти»</h3>
+                        </div>
+                        <p class="card-text">Документальный спектакль по интервью с жителями дворовых сообществ — о том, как прошлое звучит сегодня.</p>
+                        <ul class="card-meta">
+                            <li><strong>Даты:</strong> 5–8 октября</li>
+                            <li><strong>Площадка:</strong> Лаборатория</li>
+                            <li><strong>Возраст:</strong> 14+</li>
+                        </ul>
+                        <div class="card-actions">
+                            <a class="btn btn-ghost" href="#contact">Забронировать</a>
+                            <button class="btn btn-link details-btn" type="button"
+                                data-title="Голос памяти"
+                                data-description="Вербатим-постановка, созданная совместно с архивистами города. Каждая история — реальный голос, который звучит на сцене AmmA Production."
+                                data-team="Режиссёр — Игорь Сомов, драматург — лаборатория документального театра, художник — Вера Лис"
+                                data-duration="1 час 55 минут, без антракта">Подробнее</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="mission" class="section section-alt" aria-labelledby="mission-title">
+            <div class="container two-column">
+                <div>
+                    <h2 id="mission-title">Миссия и ценности</h2>
+                    <p class="section-lead">AmmA Production исследует современный театр и строит диалог с городом, создавая события, которые меняют зрителя.</p>
+                    <ul class="checklist">
+                        <li>Работаем с актуальной драматургией, поддерживая молодых авторов.</li>
+                        <li>Запускаем лаборатории и резиденции для режиссёров и хореографов.</li>
+                        <li>Открываем театр для городских сообществ и инклюзивных проектов.</li>
+                    </ul>
+                </div>
+                <div class="mission-card">
+                    <h3>Как мы работаем</h3>
+                    <p>Мы объединяем искусство, технологии и исследования. Каждая премьера проходит путь от лаборатории до большой сцены, сохраняя живой контакт со зрителем.</p>
+                    <dl class="mission-stats">
+                        <div>
+                            <dt>4</dt>
+                            <dd>премьеры в сезон</dd>
+                        </div>
+                        <div>
+                            <dt>8</dt>
+                            <dd>городских партнёров</dd>
+                        </div>
+                        <div>
+                            <dt>1000+</dt>
+                            <dd>зрителей ежемесячно</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <section id="season" class="section" aria-labelledby="season-title">
+            <div class="container">
+                <header class="section-header">
+                    <h2 id="season-title">Сезонные события</h2>
+                    <p class="section-lead">Спецпроекты, на которые стоит обратить внимание в этом году.</p>
+                </header>
+                <div class="timeline">
+                    <article class="timeline-item">
+                        <h3>Октябрь — Фестиваль «Свет городу»</h3>
+                        <p>Четыре вечерних перформанса в городском пространстве с участием местных художников света.</p>
+                    </article>
+                    <article class="timeline-item">
+                        <h3>Ноябрь — Лаборатория драматургии</h3>
+                        <p>Двухнедельная программа для авторов, чьи тексты станут основой будущих премьер.</p>
+                    </article>
+                    <article class="timeline-item">
+                        <h3>Январь — Премьера «Нить»</h3>
+                        <p>Театр-танец о памяти поколений и семейных историях. Билеты доступны с 15 декабря.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="ensemble" class="section section-alt" aria-labelledby="ensemble-title">
+            <div class="container">
+                <header class="section-header">
+                    <h2 id="ensemble-title">Команда AmmA Production</h2>
+                    <p class="section-lead">Нас объединяет любовь к исследовательскому театру и работе с новым зрителем.</p>
+                </header>
+                <div class="card-grid trio">
+                    <article class="profile-card">
+                        <h3>Полина Кравцова</h3>
+                        <p class="profile-role">Основательница и художественный руководитель</p>
+                        <p>Режиссёр, куратор фестивалей, автор методики для лабораторий документального театра.</p>
+                    </article>
+                    <article class="profile-card">
+                        <h3>Максим Орлов</h3>
+                        <p class="profile-role">Главный хореограф</p>
+                        <p>Работает с танцевальными компаниями Европы и России, привносит в AmmA Production гибридные формы.</p>
+                    </article>
+                    <article class="profile-card">
+                        <h3>Лада Несторова</h3>
+                        <p class="profile-role">Музыкальная продюсерка</p>
+                        <p>Создаёт оригинальные партитуры, работает с живым звуком и электроникой в постановках компании.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="programs" class="section" aria-labelledby="programs-title">
+            <div class="container two-column">
+                <div>
+                    <h2 id="programs-title">Студия и образовательные программы</h2>
+                    <p class="section-lead">Мы создаём пространство, где можно исследовать театр как искусство и практику.</p>
+                    <ul class="program-list">
+                        <li>
+                            <h3>Актёрская лаборатория</h3>
+                            <p>Трёхмесячный курс для актёров и перформеров. Итог — показ новой сцены в репертуаре.</p>
+                        </li>
+                        <li>
+                            <h3>Kids Stage</h3>
+                            <p>Детская студия выходного дня, где дети создают спектакль вместе с наставниками AmmA.</p>
+                        </li>
+                        <li>
+                            <h3>Stage Design Lab</h3>
+                            <p>Практический интенсив по свету, сценографии и медиа для художников и техников.</p>
+                        </li>
+                    </ul>
+                </div>
+                <aside class="program-highlight">
+                    <h3>Присоединиться к студии</h3>
+                    <p>Оставьте заявку через форму ниже или напишите на <a href="mailto:studio@amma.productions">studio@amma.productions</a>. Мы свяжемся с вами и расскажем о ближайших наборах.</p>
+                    <a class="btn btn-primary" href="#contact">Оставить заявку</a>
+                </aside>
+            </div>
+        </section>
+
+        <section id="visit" class="section section-alt" aria-labelledby="visit-title">
+            <div class="container two-column">
+                <div>
+                    <h2 id="visit-title">План визита</h2>
+                    <p class="section-lead">Сцены AmmA Production расположены в историческом здании «Арсенал» в центре города.</p>
+                    <ul class="info-list">
+                        <li>
+                            <h3>Адрес</h3>
+                            <p>Москва, ул. Новая сцена, 8</p>
+                        </li>
+                        <li>
+                            <h3>Как добраться</h3>
+                            <p>Метро «Театральная» — 7 минут пешком. Парковка доступна на соседних улицах после 19:00.</p>
+                        </li>
+                        <li>
+                            <h3>Доступность</h3>
+                            <p>Есть пандусы, лифт и отдельные места для зрителей с инвалидностью.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="visit-card">
+                    <h3>Касса и поддержка</h3>
+                    <p><strong>График:</strong> ежедневно с 12:00 до 20:00</p>
+                    <p><strong>Телефон:</strong> <a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:tickets@amma.productions">tickets@amma.productions</a></p>
+                    <p><strong>FAQ:</strong> Билеты доступны онлайн и в кассе. Возврат — за 48 часов до спектакля.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section" aria-labelledby="contact-title">
+            <div class="container two-column">
+                <div>
+                    <h2 id="contact-title">Связаться с AmmA Production</h2>
+                    <p class="section-lead">Заполните форму, чтобы стать партнёром, пригласить театр или задать вопрос. Мы ответим в течение двух рабочих дней.</p>
+                    <div class="contact-details">
+                        <p><strong>Партнёрские проекты:</strong> <a href="mailto:partners@amma.productions">partners@amma.productions</a></p>
+                        <p><strong>Пресса:</strong> <a href="mailto:press@amma.productions">press@amma.productions</a></p>
+                        <p><strong>Социальные сети:</strong> <a href="https://www.instagram.com" target="_blank" rel="noreferrer">Instagram*</a>, <a href="https://t.me" target="_blank" rel="noreferrer">Telegram</a></p>
+                        <p class="contact-note">*Социальная сеть, деятельность которой запрещена на территории РФ.</p>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form" novalidate>
+                    <div class="form-field">
+                        <label for="name">Имя</label>
+                        <input id="name" name="name" type="text" placeholder="Как к вам обращаться" required>
+                        <span class="error" id="name-error"></span>
+                    </div>
+                    <div class="form-field">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" placeholder="example@domain.ru" required>
+                        <span class="error" id="email-error"></span>
+                    </div>
+                    <div class="form-field">
+                        <label for="message">Сообщение</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Расскажите о вашем запросе" required></textarea>
+                        <span class="error" id="message-error"></span>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Отправить</button>
+                    <p class="form-confirmation" id="form-confirmation" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <img src="assets/logo.svg" alt="Логотип AmmA Production" width="140" height="54">
+                <p>Независимая театральная компания AmmA Production. Мы создаём театр будущего уже сегодня.</p>
+            </div>
+            <div class="footer-links">
+                <div>
+                    <h3>Касса</h3>
+                    <p><a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+                    <p><a href="mailto:tickets@amma.productions">tickets@amma.productions</a></p>
+                </div>
+                <div>
+                    <h3>Адрес</h3>
+                    <p>Москва, ул. Новая сцена, 8</p>
+                    <p>Ежедневно с 12:00 до 20:00</p>
+                </div>
+                <div>
+                    <h3>Следите за новостями</h3>
+                    <ul>
+                        <li><a href="https://t.me" target="_blank" rel="noreferrer">Telegram</a></li>
+                        <li><a href="https://www.youtube.com" target="_blank" rel="noreferrer">YouTube</a></li>
+                        <li><a href="https://vk.com" target="_blank" rel="noreferrer">ВКонтакте</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="footer-copy">© 2024 AmmA Production. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <div class="modal" id="details-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+        <div class="modal-backdrop" data-dismiss="modal"></div>
+        <div class="modal-content">
+            <button class="modal-close" type="button" aria-label="Закрыть" data-dismiss="modal">×</button>
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+            <dl class="modal-meta">
+                <div>
+                    <dt>Команда</dt>
+                    <dd id="modal-team"></dd>
+                </div>
+                <div>
+                    <dt>Продолжительность</dt>
+                    <dd id="modal-duration"></dd>
+                </div>
+            </dl>
+        </div>
+    </div>
+</body>
+</html>
