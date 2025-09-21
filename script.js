@@ -49,7 +49,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const openModal = (trigger) => {
         if (!modal || !modalTitle || !modalDescription || !modalTeam || !modalDuration) return;
         activeTrigger = trigger;
+
         modalTitle.textContent = trigger.dataset.title || 'Спектакль AmmA Production';
+
         modalDescription.textContent = trigger.dataset.description || '';
         modalTeam.textContent = trigger.dataset.team ? `Творческая команда: ${trigger.dataset.team}` : '';
         modalDuration.textContent = trigger.dataset.duration ? `Продолжительность: ${trigger.dataset.duration}` : '';
