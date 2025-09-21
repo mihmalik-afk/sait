@@ -1,0 +1,9 @@
+<svg width="320" height="160" viewBox="0 0 320 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">Логотип AmmA Production</title>
+  <desc id="logoDesc">Белая надпись AmmA Production на чёрном фоне с золотой плашкой художественного руководителя Веры Анненковой</desc>
+  <rect width="320" height="160" fill="#050505" rx="12"/>
+  <text x="160" y="72" text-anchor="middle" fill="#f7f4eb" font-family="'Playfair Display', 'Times New Roman', serif" font-size="58" letter-spacing="8">AmmA</text>
+  <text x="160" y="102" text-anchor="middle" fill="#f7f4eb" font-family="'Montserrat', Arial, sans-serif" font-size="20" letter-spacing="10">PRODUCTION</text>
+  <rect x="40" y="112" width="240" height="38" rx="4" fill="#caa24b"/>
+  <text x="160" y="136" text-anchor="middle" fill="#050505" font-family="'Montserrat', Arial, sans-serif" font-size="12" letter-spacing="3">ХУДОЖЕСТВЕННЫЙ РУКОВОДИТЕЛЬ ВЕРА АННЕНКОВА</text>
+</svg>
